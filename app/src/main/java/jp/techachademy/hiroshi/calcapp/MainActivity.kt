@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(){
         val a1 = editText1.text.toString()
         val a2 = editText2.text.toString()
 
-        if(a1 != "" && a2 != "") {
+        if(a1 != "" && a2 != "" && a2 != "0") {
         var num1 = Integer.parseInt(a1)
         var num2 = Integer.parseInt(a2)
         var sum = num1 / num2
