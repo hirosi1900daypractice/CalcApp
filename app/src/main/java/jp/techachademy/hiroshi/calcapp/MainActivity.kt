@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-
+import java.lang.Float.parseFloat
 
 
 class MainActivity : AppCompatActivity(){
@@ -32,10 +32,11 @@ class MainActivity : AppCompatActivity(){
         val a2 = editText2.text.toString()
 
         if(a1 != "" && a2 != "") {
-        var num1 = Integer.parseInt(a1)
-        var num2 = Integer.parseInt(a2)
+        var num1 = a1.toDouble()
+        var num2 = a2.toDouble()
 
         var sum = num1 + num2
+
             val intent = Intent(this, second::class.java)
             intent.putExtra("RESULT", sum)
 
@@ -50,9 +51,9 @@ class MainActivity : AppCompatActivity(){
         val a2 = editText2.text.toString()
 
         if(a1 != "" && a2 != "") {
-        var num1 = Integer.parseInt(a1)
-        var num2 = Integer.parseInt(a2)
-        var sum = num1 - num2
+            var num1 = a1.toDouble()
+            var num2 = a2.toDouble()
+            var sum = num1 - num2
 
             val intent = Intent(this, second::class.java)
             intent.putExtra("RESULT", sum)
@@ -68,10 +69,9 @@ class MainActivity : AppCompatActivity(){
         val a2 = editText2.text.toString()
 
         if(a1 != "" && a2 != "") {
-        var num1 = Integer.parseInt(a1)
-        var num2 = Integer.parseInt(a2)
-        var sum = num1 * num2
-
+            var num1 = a1.toDouble()
+            var num2 = a2.toDouble()
+            var sum = num1 * num2
             val intent = Intent(this, second::class.java)
             intent.putExtra("RESULT", sum)
             startActivity(intent)
@@ -85,9 +85,9 @@ class MainActivity : AppCompatActivity(){
         val a2 = editText2.text.toString()
 
         if(a1 != "" && a2 != "" && a2 != "0") {
-        var num1 = Integer.parseInt(a1)
-        var num2 = Integer.parseInt(a2)
-        var sum = num1 / num2
+            var num1 = a1.toDouble()
+            var num2 = a2.toDouble()
+            var sum = num1 / num2
 
             val intent = Intent(this, second::class.java)
             intent.putExtra("RESULT", sum)

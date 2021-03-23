@@ -11,11 +11,11 @@ class second : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val Result = intent.getIntExtra("RESULT", 0)
+        val Result = intent.getDoubleExtra("RESULT", 0.0)
 
 
         if(Result != null){
-             textViewResult.text = "${Result}"
+             textViewResult.text = String.format("%.2f", Result)
          }
 
 
